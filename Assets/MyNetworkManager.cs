@@ -24,13 +24,13 @@ public class MyNetworkManager :NetworkManager {
         Debug.Log("Host started at " + Time.timeSinceLevelLoad);
     }
 
-    public override void OnClientConnect(NetworkConnection conn)
-    {
-        Debug.Log("Client connected " + Time.timeSinceLevelLoad);
-    }
-
     public override void OnStartClient(NetworkClient client)
     {
         Debug.Log("Client started " + Time.timeSinceLevelLoad);
+    }
+
+    public override void OnClientConnect(NetworkConnection conn)
+    {
+        Debug.Log("Client connected " + Time.timeSinceLevelLoad);
     }
 }
